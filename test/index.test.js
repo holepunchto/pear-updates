@@ -5,6 +5,7 @@ const sodium = require('sodium-native')
 const IPC = require('pear-ipc')
 const Iambus = require('iambus')
 const { isWindows } = require('which-runtime')
+global.Pear = {}
 const updates = require('..')
 
 function pipeId (s) {
