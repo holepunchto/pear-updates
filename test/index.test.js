@@ -38,7 +38,7 @@ test('updates()', async (t) => {
   class API {
     static IPC = kIPC
     get [kIPC] () { return ipc }
-    teardown () {}
+    teardown = t.teardown
   }
   global.Pear = new API()
 
@@ -72,7 +72,7 @@ test('updates(listener)', async (t) => {
   class API {
     static IPC = kIPC
     get [kIPC] () { return ipc }
-    teardown () {}
+    teardown = t.teardown
   }
   global.Pear = new API()
 
