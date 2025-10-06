@@ -17,9 +17,7 @@ function pipeId(s) {
 test('updates()', async (t) => {
   t.plan(1)
   const kIPC = Symbol('test.ipc')
-  const socketPath = isWindows
-    ? `\\\\.\\pipe\\test-${pipeId(__dirname)}`
-    : __dirname + '/test.sock' // eslint-disable-line
+  const socketPath = isWindows ? `\\\\.\\pipe\\test-${pipeId(__dirname)}` : __dirname + '/test.sock' // eslint-disable-line
   const bus = new Iambus()
   const srv = new IPC.Server({
     socketPath,
@@ -72,9 +70,7 @@ test('updates()', async (t) => {
 test('updates(listener)', async (t) => {
   t.plan(1)
   const kIPC = Symbol('test.ipc')
-  const socketPath = isWindows
-    ? `\\\\.\\pipe\\test-${pipeId(__dirname)}`
-    : __dirname + '/test.sock' // eslint-disable-line
+  const socketPath = isWindows ? `\\\\.\\pipe\\test-${pipeId(__dirname)}` : __dirname + '/test.sock' // eslint-disable-line
   const bus = new Iambus()
   const srv = new IPC.Server({
     socketPath,
