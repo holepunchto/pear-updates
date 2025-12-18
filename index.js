@@ -1,6 +1,6 @@
 'use strict'
 const messages = require('pear-messages')
-module.exports = function updates (pattern, listener) {
+module.exports = function updates(pattern, listener) {
   const ipc = global.Pear?.[global.Pear?.constructor.IPC]
   if (typeof pattern === 'function') {
     const opts = listener ?? {}
